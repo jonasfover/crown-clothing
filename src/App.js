@@ -19,7 +19,6 @@ class App extends React.Component {
   }
 
   unsubscribeFromAuth = null;
-
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -32,8 +31,6 @@ class App extends React.Component {
               ...snapShot.data()
             }
           });
-
-          console.log(this.state);
         });
       }
 
